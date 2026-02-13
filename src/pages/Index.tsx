@@ -33,7 +33,7 @@ const Index = () => {
           transition={{ duration: 0.8 }}
           className="relative z-10 text-center px-4 max-w-4xl mx-auto">
 
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-none text-foreground mb-6 font-serif">Train Smart. 
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-none text-foreground mb-6 font-serif">Train Hard.
 Train Smart.
 Train at Pulse.<br />
             <span className="text-primary">Train Smart.</span><br />
@@ -73,11 +73,11 @@ Train at Pulse.<br />
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {programs.map((p, i) => <motion.div
-              key={p.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}>
+                key={p.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}>
 
                 <Card className="bg-card border-border hover:border-primary/50 transition-colors h-full">
                   <CardContent className="p-6 flex flex-col h-full">
