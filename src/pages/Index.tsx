@@ -3,21 +3,73 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
-import { Dumbbell, Users, UserCheck, Flame, Target, Trophy } from "lucide-react";
+import {
+  Dumbbell,
+  Users,
+  UserCheck,
+  Flame,
+  Target,
+  Trophy,
+} from "lucide-react";
 
 const programs = [
-  { icon: Trophy, title: "HYROX Preparation", desc: "Competition-ready training for HYROX races. Build endurance, strength, and mental grit.", link: "/programs" },
-  { icon: Users, title: "Group Training", desc: "High-energy group sessions that push your limits. Train together, grow together.", link: "/programs" },
-  { icon: UserCheck, title: "Personal Training", desc: "One-on-one coaching tailored to your goals. Maximum results, zero guesswork.", link: "/programs" },
-  { icon: Flame, title: "CrossFit", desc: "Functional movements at high intensity. Build power, speed, and conditioning.", link: "/programs" },
-  { icon: Target, title: "Functional Training", desc: "Train your body the way it's meant to move. Real strength for real life.", link: "/programs" },
-  { icon: Dumbbell, title: "Strength Training", desc: "Progressive overload. Compound lifts. Pure strength development.", link: "/programs" },
+  {
+    icon: Trophy,
+    title: "HYROX Preparation",
+    desc: "Competition-ready training for HYROX races. Build endurance, strength, and mental grit.",
+    link: "/programs",
+  },
+  {
+    icon: Users,
+    title: "Group Training",
+    desc: "High-energy group sessions that push your limits. Train together, grow together.",
+    link: "/programs",
+  },
+  {
+    icon: UserCheck,
+    title: "Personal Training",
+    desc: "One-on-one coaching tailored to your goals. Maximum results, zero guesswork.",
+    link: "/programs",
+  },
+  {
+    icon: Flame,
+    title: "CrossFit",
+    desc: "Functional movements at high intensity. Build power, speed, and conditioning.",
+    link: "/programs",
+  },
+  {
+    icon: Target,
+    title: "Functional Training",
+    desc: "Train your body the way it's meant to move. Real strength for real life.",
+    link: "/programs",
+  },
+  {
+    icon: Dumbbell,
+    title: "Strength Training",
+    desc: "Progressive overload. Compound lifts. Pure strength development.",
+    link: "/programs",
+  },
 ];
 
 const testimonials = [
-  { name: "Arjun M.", quote: "Pulse Fitness transformed my approach to training. The coaches here are world-class.", role: "HYROX Athlete" },
-  { name: "Priya S.", quote: "I've never felt stronger or more confident. The community here is unmatched.", role: "Member since 2023" },
-  { name: "Rahul K.", quote: "From beginner to competing in CrossFit events — Pulse made it possible.", role: "CrossFit Competitor" },
+  {
+    name: "Arjun M.",
+    quote:
+      "Pulse Fitness transformed my approach to training. The coaches here are world-class.",
+    role: "HYROX Athlete",
+  },
+  {
+    name: "Priya S.",
+    quote:
+      "I've never felt stronger or more confident. The community here is unmatched.",
+    role: "Member since 2023",
+  },
+  {
+    name: "Rahul K.",
+    quote:
+      "From beginner to competing in CrossFit events — Pulse made it possible.",
+    role: "CrossFit Competitor",
+  },
 ];
 
 const Index = () => {
@@ -34,18 +86,30 @@ const Index = () => {
           className="relative z-10 text-center px-4 max-w-4xl mx-auto"
         >
           <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-none text-foreground mb-6">
-            Train Hard.<br />
-            <span className="text-primary">Train Smart.</span><br />
+            Train Hard.
+            <br />
+            <span className="text-primary">Train Smart.</span>
+            <br />
             Train at <span className="text-accent">Pulse.</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Where discipline meets performance. Join Mumbai's most results-driven fitness community.
+            Where discipline meets performance. Join Jodhpur's most
+            results-driven fitness community.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg font-bold uppercase tracking-wider px-8">
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg font-bold uppercase tracking-wider px-8"
+            >
               <Link to="/contact">Join Now</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground text-lg font-bold uppercase tracking-wider px-8">
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-accent text-accent hover:bg-accent hover:text-accent-foreground text-lg font-bold uppercase tracking-wider px-8"
+            >
               <Link to="/contact">Book a Trial</Link>
             </Button>
           </div>
@@ -59,7 +123,11 @@ const Index = () => {
             More Than a Gym. A <span className="text-primary">System.</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            At Pulse Fitness, we don't believe in shortcuts. We believe in structured training, expert coaching, and relentless consistency. Whether you're preparing for HYROX, building raw strength, or transforming your body — we have the programs, the coaches, and the environment to get you there.
+            At Pulse Fitness, we don't believe in shortcuts. We believe in
+            structured training, expert coaching, and relentless consistency.
+            Whether you're preparing for HYROX, building raw strength, or
+            transforming your body — we have the programs, the coaches, and the
+            environment to get you there.
           </p>
         </div>
       </section>
@@ -82,9 +150,16 @@ const Index = () => {
                 <Card className="bg-card border-border hover:border-primary/50 transition-colors h-full">
                   <CardContent className="p-6 flex flex-col h-full">
                     <p.icon className="text-primary mb-4" size={40} />
-                    <h3 className="font-display text-2xl text-foreground mb-2">{p.title}</h3>
-                    <p className="text-muted-foreground text-sm flex-1 mb-4">{p.desc}</p>
-                    <Link to={p.link} className="text-primary text-sm font-semibold uppercase tracking-wider hover:text-primary/80 transition-colors">
+                    <h3 className="font-display text-2xl text-foreground mb-2">
+                      {p.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm flex-1 mb-4">
+                      {p.desc}
+                    </p>
+                    <Link
+                      to={p.link}
+                      className="text-primary text-sm font-semibold uppercase tracking-wider hover:text-primary/80 transition-colors"
+                    >
                       Learn More →
                     </Link>
                   </CardContent>
@@ -112,7 +187,9 @@ const Index = () => {
               >
                 <Card className="bg-card border-border h-full">
                   <CardContent className="p-6">
-                    <p className="text-foreground text-lg italic mb-4">"{t.quote}"</p>
+                    <p className="text-foreground text-lg italic mb-4">
+                      "{t.quote}"
+                    </p>
                     <p className="text-primary font-semibold">{t.name}</p>
                     <p className="text-muted-foreground text-sm">{t.role}</p>
                   </CardContent>
@@ -131,8 +208,13 @@ const Index = () => {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="aspect-square bg-card border border-border rounded-lg flex items-center justify-center">
-                <span className="text-muted-foreground text-sm">@pulsefitness</span>
+              <div
+                key={i}
+                className="aspect-square bg-card border border-border rounded-lg flex items-center justify-center"
+              >
+                <span className="text-muted-foreground text-sm">
+                  @pulsefitness
+                </span>
               </div>
             ))}
           </div>
@@ -146,9 +228,14 @@ const Index = () => {
             Ready to <span className="text-accent">Transform?</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-8">
-            Stop waiting. Start training. Your strongest self is one decision away.
+            Stop waiting. Start training. Your strongest self is one decision
+            away.
           </p>
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg font-bold uppercase tracking-wider px-10">
+          <Button
+            asChild
+            size="lg"
+            className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg font-bold uppercase tracking-wider px-10"
+          >
             <Link to="/contact">Start Your Journey</Link>
           </Button>
         </div>
