@@ -6,19 +6,19 @@ import Layout from "@/components/Layout";
 import { Dumbbell, Users, UserCheck, Flame, Target, Trophy } from "lucide-react";
 
 const programs = [
-{ icon: Trophy, title: "HYROX Preparation", desc: "Competition-ready training for HYROX races. Build endurance, strength, and mental grit.", link: "/programs" },
-{ icon: Users, title: "Group Training", desc: "High-energy group sessions that push your limits. Train together, grow together.", link: "/programs" },
-{ icon: UserCheck, title: "Personal Training", desc: "One-on-one coaching tailored to your goals. Maximum results, zero guesswork.", link: "/programs" },
-{ icon: Flame, title: "CrossFit", desc: "Functional movements at high intensity. Build power, speed, and conditioning.", link: "/programs" },
-{ icon: Target, title: "Functional Training", desc: "Train your body the way it's meant to move. Real strength for real life.", link: "/programs" },
-{ icon: Dumbbell, title: "Strength Training", desc: "Progressive overload. Compound lifts. Pure strength development.", link: "/programs" }];
-
+  { icon: Trophy, title: "HYROX Preparation", desc: "Competition-ready training for HYROX races. Build endurance, strength, and mental grit.", link: "/programs" },
+  { icon: Users, title: "Group Training", desc: "High-energy group sessions that push your limits. Train together, grow together.", link: "/programs" },
+  { icon: UserCheck, title: "Personal Training", desc: "One-on-one coaching tailored to your goals. Maximum results, zero guesswork.", link: "/programs" },
+  { icon: Flame, title: "CrossFit", desc: "Functional movements at high intensity. Build power, speed, and conditioning.", link: "/programs" },
+  { icon: Target, title: "Functional Training", desc: "Train your body the way it's meant to move. Real strength for real life.", link: "/programs" },
+  { icon: Dumbbell, title: "Strength Training", desc: "Progressive overload. Compound lifts. Pure strength development.", link: "/programs" },
+];
 
 const testimonials = [
-{ name: "Arjun M.", quote: "Pulse Fitness transformed my approach to training. The coaches here are world-class.", role: "HYROX Athlete" },
-{ name: "Priya S.", quote: "I've never felt stronger or more confident. The community here is unmatched.", role: "Member since 2023" },
-{ name: "Rahul K.", quote: "From beginner to competing in CrossFit events — Pulse made it possible.", role: "CrossFit Competitor" }];
-
+  { name: "Arjun M.", quote: "Pulse Fitness transformed my approach to training. The coaches here are world-class.", role: "HYROX Athlete" },
+  { name: "Priya S.", quote: "I've never felt stronger or more confident. The community here is unmatched.", role: "Member since 2023" },
+  { name: "Rahul K.", quote: "From beginner to competing in CrossFit events — Pulse made it possible.", role: "CrossFit Competitor" },
+];
 
 const Index = () => {
   return (
@@ -31,11 +31,10 @@ const Index = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-none text-foreground mb-6 font-serif">Train Hard.
-Train Smart.
-Train at Pulse.<br />
+          className="relative z-10 text-center px-4 max-w-4xl mx-auto"
+        >
+          <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-none text-foreground mb-6">
+            Train Hard.<br />
             <span className="text-primary">Train Smart.</span><br />
             Train at <span className="text-accent">Pulse.</span>
           </h1>
@@ -72,13 +71,14 @@ Train at Pulse.<br />
             Our <span className="text-primary">Programs</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {programs.map((p, i) => <motion.div
+            {programs.map((p, i) => (
+              <motion.div
                 key={p.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}>
-
+                transition={{ delay: i * 0.1 }}
+              >
                 <Card className="bg-card border-border hover:border-primary/50 transition-colors h-full">
                   <CardContent className="p-6 flex flex-col h-full">
                     <p.icon className="text-primary mb-4" size={40} />
@@ -90,7 +90,7 @@ Train at Pulse.<br />
                   </CardContent>
                 </Card>
               </motion.div>
-            )}
+            ))}
           </div>
         </div>
       </section>
@@ -102,14 +102,14 @@ Train at Pulse.<br />
             What Our <span className="text-primary">Athletes</span> Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) =>
-            <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}>
-
+            {testimonials.map((t, i) => (
+              <motion.div
+                key={t.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+              >
                 <Card className="bg-card border-border h-full">
                   <CardContent className="p-6">
                     <p className="text-foreground text-lg italic mb-4">"{t.quote}"</p>
@@ -118,7 +118,7 @@ Train at Pulse.<br />
                   </CardContent>
                 </Card>
               </motion.div>
-            )}
+            ))}
           </div>
         </div>
       </section>
@@ -130,11 +130,11 @@ Train at Pulse.<br />
             Follow Us on <span className="text-primary">Instagram</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {[1, 2, 3, 4].map((i) =>
-            <div key={i} className="aspect-square bg-card border border-border rounded-lg flex items-center justify-center">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="aspect-square bg-card border border-border rounded-lg flex items-center justify-center">
                 <span className="text-muted-foreground text-sm">@pulsefitness</span>
               </div>
-            )}
+            ))}
           </div>
         </div>
       </section>
@@ -153,8 +153,8 @@ Train at Pulse.<br />
           </Button>
         </div>
       </section>
-    </Layout>);
-
+    </Layout>
+  );
 };
 
 export default Index;
